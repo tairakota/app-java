@@ -9,6 +9,7 @@ public class Rectangle implements Shape {
         this.beside = beside;
     }
 
+    @Override
     public int calculateArea() {
         return vertical * beside;
     }
