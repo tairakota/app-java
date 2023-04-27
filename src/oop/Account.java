@@ -14,15 +14,6 @@ public class Account {
     }
 
     public String getAccountInfo() {
-        name = "名前：" + name;
-        tel = "TEL：" + tel;
-        email = "メール" + email;
-        address = "アドレス" + address;
-        var info = name;
-        info += tel;
-        info += email;
-        info += address;
-
-        return info;
+        return "名前：" + name + ", TEL：" + tel + ", メールアドレス：" + email + ", 住所：" + address;
     }
 }

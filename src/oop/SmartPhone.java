@@ -4,11 +4,12 @@ public class SmartPhone {
     String model;
     String os;
     Account account;
-    AddressBook[] addressBooks;
+    AddressBook[] addressBooks = new AddressBook[1];
     String[] apps;
 
     public SmartPhone(String model, String os) {
-
+        this.model = model;
+        this.os = os;
     }
 
     public void setAccount(Account account) {
@@ -21,16 +22,22 @@ public class SmartPhone {
     }
 
     public void displayMyAccount() {
-        System.out.println(account);
+        System.out.println(account.getAccountInfo());
     }
 
     public boolean addAddressBook(AddressBook addressBooks) {
-        return true;
+        if (this.addressBooks[0] == null) {
+            this.addressBooks[0] = addressBooks;
+            System.out.println("true");
+            return true;
+        }
+        System.out.println("false");
+        return false;
     }
 
-    public void displayAooList() {
-        for (var i = 0; i >= 0; i++) {
-            System.out.println(apps);
+    public void displayAppList() {
+        for (var i = 0; i < apps.length; i++) {
+            System.out.println(apps[i]);
         }
     }
 }
